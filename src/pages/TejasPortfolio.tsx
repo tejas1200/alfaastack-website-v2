@@ -258,7 +258,6 @@ const TejasPortfolio = () => {
           <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 py-20 lg:grid-cols-[1.1fr_0.9fr]">
 
             <div>
-              Building scalable software and digital products
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-400/20 bg-green-400/10 px-4 py-2 text-sm text-green-300">
 
                 <span className="h-2 w-2 rounded-full bg-green-400" />
