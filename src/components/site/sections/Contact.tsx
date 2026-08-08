@@ -38,6 +38,8 @@ const [form, setForm] = useState<ContactFormData>({
 });
 
 
+
+
 const handleChange = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 ) => {
@@ -49,47 +51,45 @@ const handleChange = (
   }));
 };
 
-const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwN85r8NoTsKbzgTy6HY7VLUtxsTJUcDO4mtptqOj1QAnEdy2X0QeFGSYVq3nxlWRO6yA/exec";
 
 const handleSubmit = async (
-  e: React.FormEvent<HTMLFormElement>
+  e: React.FormEvent
 ) => {
   e.preventDefault();
 
   setLoading(true);
 
   try {
-   const response = await fetch(SCRIPT_URL, {
-    method: "POST",
-    mode: "cors",
-    redirect: "follow",
-    headers: {
-      "Content-Type": "text/plain;charset=utf-8",
-    },
-    body: JSON.stringify(form),
-  });
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
 
     const result = await response.json();
 
-    if (result.success) {
-      toast.success(
-        "Thank you! We'll contact you within 24 hours."
+    if (!response.ok || !result.success) {
+      throw new Error(
+        result.message || "Submission failed."
       );
-
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        budget: "",
-        message: "",
-      });
-    } else {
-      toast.error(result.message || "Submission failed.");
     }
+
+    toast.success(
+      "Thank you! We'll contact you within 24 hours."
+    );
+
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      budget: "",
+      message: "",
+    });
   } catch (error) {
-    console.error(error);
+    console.error("Contact form error:", error);
 
     toast.error(
       "Unable to submit your request. Please try again."
