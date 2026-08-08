@@ -1258,7 +1258,7 @@ const TejasPortfolio = () => {
             </p>
 
             <p>
-              Built with React & modern web technologies.
+              
             </p>
 
           </div>
