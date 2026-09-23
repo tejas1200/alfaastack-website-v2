@@ -22,11 +22,23 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+
+  const onScroll = () => {
+    setScrolled(window.scrollY > 12);
+  };
+
+  window.scrollTo(0, 0);
+  onScroll();
+
+  window.addEventListener("scroll", onScroll);
+
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+  };
+}, []);
 
   return (
     <header
