@@ -39,7 +39,7 @@ export function Navbar() {
         <div
           className={cn(
             "flex items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-300",
-            scrolled ? "glass shadow-card" : "bg-transparent"
+            scrolled ? "glass shadow-card" : "navbar-top"
           )}
         >
           <Logo />
