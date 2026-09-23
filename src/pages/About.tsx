@@ -9,7 +9,7 @@ import { useSiteContent } from "@/hooks/useSiteContent";
 
 const values = [
   { icon: Target, title: "Outcome-focused", desc: "We measure success by your business metrics, not deliverables." },
-  { icon: Users, title: "Expert team", desc: "Every project is led and delivered by experts with 2+ years experience." },
+  { icon: Users, title: "Expert team", desc: "Every project is led and delivered by experts." },
   { icon: Zap, title: "Ship fast", desc: "Weekly demos, tight loops, and a bias for action from day one." },
   { icon: Shield, title: "Full ownership", desc: "You own the code, the designs, and the roadmap. Always." },
 ];
