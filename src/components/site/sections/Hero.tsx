@@ -114,18 +114,18 @@ export function Hero() {
               </div>
 
               {/* Floating chip: Launches */}
-              {/* <div className="hidden sm:flex absolute -right-4 bottom-16 glass rounded-2xl p-3 pr-4 shadow-card animate-float items-center gap-3" style={{ animationDelay: "1.5s" }}>
+              <div className="hidden sm:flex absolute -right-4 bottom-16 glass rounded-2xl p-3 pr-4 shadow-card animate-float items-center gap-3" style={{ animationDelay: "1.5s" }}>
                 <div className="h-10 w-10 rounded-xl bg-emerald-500/15 text-emerald-500 grid place-items-center">
                   <Rocket className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-wide text-muted-foreground">This month</p>
-                  <p className="text-sm font-semibold">12 launches</p>
+                  <p className="text-[10px] uppercase tracking-wide text-muted-foreground">Rating</p>
+                  <p className="text-sm font-semibold">4.5 +</p>
                 </div>
-              </div> */}
+              </div>
 
               {/* Bottom stat bar */}
-              <div className="absolute inset-x-4 bottom-4 glass rounded-2xl p-4 shadow-card">
+              {/* <div className="absolute inset-x-4 bottom-4 glass rounded-2xl p-4 shadow-card">
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
                     <p className="font-display text-base sm:text-lg font-semibold gradient-text">7+</p>
@@ -140,7 +140,8 @@ export function Hero() {
                     <p className="text-[10px] uppercase tracking-wide text-muted-foreground">Countries</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              
             </div>
           </div>
         </div>
