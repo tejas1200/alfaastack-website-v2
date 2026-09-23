@@ -23,7 +23,7 @@ const clients = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[100svh] overflow-hidden bg-gradient-hero">
       <div className="absolute inset-0 grid-bg opacity-60" aria-hidden />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[560px] w-[960px] rounded-full brand-gradient opacity-25 blur-3xl" aria-hidden />
       <div className="absolute bottom-0 -right-24 h-[420px] w-[420px] rounded-full bg-primary-glow/30 blur-3xl" aria-hidden />
