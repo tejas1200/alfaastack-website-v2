@@ -92,7 +92,7 @@ export function Navbar() {
         </div>
 
         {open && (
-          <div className="lg:hidden mt-2 glass rounded-2xl p-3 animate-fade-in">
+          <div className="lg:hidden mt-2 mobile-nav-menu rounded-2xl p-3 animate-fade-in">
             <nav className="grid gap-1" aria-label="Mobile">
               {links.map((l) => (
                 <NavLink
