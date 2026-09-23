@@ -1,8 +1,8 @@
 const stats = [
-  { value: "7+", label: "Projects delivered" },
-  { value: "5+", label: "Happy clients" },
-  { value: "2+", label: "Countries served" },
-  { value: "4.9/5", label: "Avg. client rating" },
+  { value: "2+", label: "Years of Experience" },
+  { value: "3+", label: "Core Services" },
+  { value: "24/7", label: "Development Support" },
+  { value: "100%", label: "Dedicated Support" },
 ];
 
 export function TrustMetrics() {
