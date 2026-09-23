@@ -7,7 +7,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <Navbar />
-      <main id="main" className="pt-24">{children}</main>
+      <main id="main">{children}</main>
       <Footer />
       <WhatsAppButton />
     </div>
