@@ -14,7 +14,7 @@ import { Contact } from "@/components/site/sections/Contact";
 const Index = () => (
   <>
     <Hero />
-    <FounderSection />
+    {/* <FounderSection /> */}
     <TrustMetrics />
     <Services />
     <Process />
