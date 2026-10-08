@@ -49,7 +49,7 @@ const About = () => {
       </div>
     </Section>
 
-    <Section
+    {/* <Section
       eyebrow="The team"
       title={<>Small team, <span className="gradient-text">big craft</span></>}
       description="Meet the humans behind your project."
@@ -76,7 +76,7 @@ const About = () => {
           </div>
         ))}
       </div>
-    </Section>
+    </Section> */}
 
     <Testimonials />
     <CTA />
